@@ -1,0 +1,17 @@
+class Solution:
+    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        greatest = {}
+        stack = []
+        output=[]
+        for num in nums2:
+            while len(stack)>0 and num>stack[-1]:
+                greatest[stack.pop()]=num
+            stack.append(num)
+        
+        for num in nums1:
+            if num in greatest: 
+                output.append(greatest[num])
+            else:
+                output.append(-1)
+        return output
+                
