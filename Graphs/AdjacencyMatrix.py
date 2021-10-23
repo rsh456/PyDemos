@@ -11,7 +11,7 @@ class Graph(abc.ABC):
     pass
   
   @abc.abstractmethod
-  def get_adjacent_vertices(sel,v):
+  def get_adjacent_vertices(self,v):
     pass
   
   @abc.abstractmethod
